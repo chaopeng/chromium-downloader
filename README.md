@@ -1,2 +1,3 @@
-# chromium-latest-linux
-Scripts to download and run the latest Linux build of Chromium.
+Chromium Downloader
+
+This is a scripts to download the snapshot version of chromuim. Now it support Linux, Mac and Windows.
