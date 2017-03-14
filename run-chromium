@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Author: chaopeng
+# Date: 2017-01-31
+
+# This script is fork from https://github.com/scheib/chromium-latest-linux
+# This also support Mac now
+
+BASE_DIR=~/chromium-downloads
+
+cd $BASE_DIR
+
+if [ ! -d $1 ]; then
+  echo "chromium $1 not exists"
+  exit 1
+fi
+
+cd $1
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  cd Chromium.app/Contents/MacOS
+  ./Chromium --user-data-dir="$BASE_DIR/user-data"
+else
+  ./chrome --user-data-dir="$BASE_DIR/user-data"
+fi
